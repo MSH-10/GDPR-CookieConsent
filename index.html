@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <title>Cookie Consent Form Demo</title>
+</head>
+
+<body>
+
+    <!-- Cookie Consent by https://www.AdFixus.com -->
+    <!-- <script type="text/javascript" src="https://ccf.surge.sh/ccForm-Builder.js" charset="UTF-8"></script> -->
+    <script type="text/javascript" src="./ccForm-Builder.js" charset="UTF-8"></script>
+    <!-- <script type="text/javascript" charset="UTF-8">
+        document.addEventListener('DOMContentLoaded', function () {
+            cookieConsent({
+                'palette': 'light', 'primaryColor': '#0a9ddd', 'secondaryColor': '#c64e0e',
+                "domain": "adfixus.com",
+                "privacyPolicyLink": 'https://adfixus.com/',
+                "notice_banner_reject_button_hide": false,
+                "preferences_center_close_button_hide": false,
+
+            });
+        });
+
+    </script> -->
+    <!-- Cookie Consent by https://www.AdFixus.com -->
+    <!-- <script type="text/javascript" src="//www.ccf.surge.sh/ccform.js" charset="UTF-8"></script> -->
+    <script type="text/javascript" charset="UTF-8">
+        debugger;
+        //var MYDATA = location.href.split('=')[1].split('&');
+        window.addEventListener('message', function (dataPassed) {
+            //Your logic here.
+            alert("message recieved");
+        });
+        function cookieCConsent() {
+            debugger;
+            console.log("called from index.html");
+            alert("called");
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            cookieConsent(
+                {
+                    "siteName": "Test",
+                    "domain": "www.adfixus.com",
+                    "acceptBtn": {"IsActive":true,"Text":"Accept All"},
+                    "declineBtn": {"IsActive":true,"Text":"Accept Necessery"},
+                    "changePrefBtn": {"IsActive":true,"Text":"Manage Settings"},
+                    "theme": "light",
+                    "primaryColor": "#eee",
+                    "secondaryColor": "#333",
+                    "language": 'en',
+                    "privacyPolicyLink": "https://example.com/privacy-policy",
+                    "cookieCategories": [{"Name":"Necessary","IsEnabled":true},{"Name":"Functional","IsEnabled":false},{"Name":"Performance","IsEnabled":false},{"Name":"Analytics","IsEnabled":false},{"Name":"Advertisement","IsEnabled":false},{"Name":"Others","IsEnabled":false}],
+                    "cookiesTabel": [{"Name":"Cookie 1","Type":"Functional","Description":"this is first cookie","Duration":{"Time":6,"Duration":"minutes","Value":"6 minutes","AcctualValue":"2022-06-07T05:46:46.918Z"}},{"Name":"Cookie 1\t","Type":"Analytics","Description":"this is 2nd cookie\t","Duration":{"Time":6,"Duration":"minutes","Value":"6 minutes","AcctualValue":"2022-06-07T05:46:46.918Z"}}],
+                    "page_load_consent_levels": ["strictly-necessary","functionality","tracking","targeting"],
+                    "notice_banner_reject_button_hide": "false",
+                    "preferences_center_close_button_hide": false,
+                    "page_refresh_confirmation_buttons": false,
+                    "open_preferences_center_selector": "#testing",
+                    "website_privacy_policy_url": " https://example.com/privacy-policy"
+                }
+            );
+        });
+    </script>
+
+    <noscript>Cookie Consent by <a href="https://www.adfixus.com/" rel="nofollow noopener">Privacy Policies Generator
+            website</a></noscript>
+    <!--End Cookie Consent-- >
+            
+    < !--test -->
+    <script type="text/plain" cookie-consent="strictly-necessary"></script>
+    <!-- end of test-->
+
+</body>
+
+</html>
